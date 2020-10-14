@@ -1,0 +1,388 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="../css/style.css"> -->
+
+<style>
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  font-family: "Open Sans", sans-serif;
+  font-size: 62.5%;
+}
+
+aside {
+  background: -webkit-linear-gradient(90deg, #8D80AD, #6D70BE);
+  background: linear-gradient(40deg, #8D80AD, #6D70BE);
+  height: 100vh;
+  width: 25%;
+  position: fixed;
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav h1 {
+  font-family: 'Lobster', cursive;
+  color: #FFF;
+  margin-top: 30px;
+  font-size: 70px;
+  font-size: 7rem;
+}
+
+nav ul {
+  margin-top: 50px;
+}
+
+nav li {
+  list-style: none;
+  margin: 20px 0;
+  padding: 10px;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.3rem;
+}
+
+nav li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+section {
+  height: 100vh;
+  background: #FFF;
+  height: 100%;
+  width: 75%;
+  float: right;
+  padding-bottom: 100px;
+}
+
+article {
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+article h2 {
+  padding: 10px 0;
+  color: #8D80AD;
+  font-size: 17px;
+  font-size: 1.7rem;
+}
+
+article p {
+  padding: 10px 0;
+  color: #8D80AD;
+  width: 95%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+.thumb {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  display: block;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #DDD;
+}
+
+.thumb img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  object-fit: cover;
+}
+
+.thumb img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+button {
+  background: transparent;
+  border: 1px solid #8D80AD;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  border-radius: 100px;
+}
+
+button:hover {
+  background: -webkit-linear-gradient(50deg, #8D80AD, #6D70BE);
+  background: linear-gradient(40deg, #8D80AD, #6D70BE);
+}
+
+button a {
+  color: #8D80AD;
+  text-decoration: none;
+  display: block;
+  padding: 8px 15px;
+  font-weight: 300;
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+
+button a:hover {
+  color: #FFF;
+}
+
+.options {
+  float: right;
+  margin-top: 8px;
+}
+
+.options li {
+  float: left;
+  list-style: none;
+  color: #AAA;
+  padding: 0 5px;
+  font-size: 1rem;
+}
+
+.social {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.fa {
+  color: #AAA;
+  padding: 0 5px;
+  font-size: 11px !important;
+  font-size: 1.1rem !important;
+}
+
+.fa-twitter,
+.fa-codepen,
+.fa-linkedin {
+  color: #FFF;
+  font-size: 12px !important;
+  font-size: 1.2rem !important;
+}
+
+.loved {
+  color: #B74F66;
+  -webkit-animation: loved 1s;
+  animation: loved 1s;
+}
+
+@-webkit-keyframes loved {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes loved {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  aside {
+    visibility: hidden;
+  }
+  article {
+    width: 90%;
+  }
+  section {
+    width: 100%;
+  }
+}
+
+
+</style>
+
+<body>
+
+  <aside>
+
+    <nav>
+
+      <h1>J</h1>
+
+      <ul>
+
+        <li><a href="#">Blogging Page</a></li>
+
+        <li><a href="#">Find out who I am</a></li>
+
+        <li><a href="#">Say hello</a></li>
+
+        <li><a href="#">Check out my work</a></li>
+
+      </ul>
+
+    </nav>
+
+    <div class="social">
+
+      <a href="#"><i class="fa fa-twitter"></i></a>
+
+      <a href="#"><i class="fa fa-codepen"></i></a>
+
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+
+    </div>
+
+  </aside>
+  
+    <section>
+
+      {%BLOG_POSTS%}
+    
+<!--
+      <article>
+
+        <h2>Post Title</h2>
+
+        <div class="thumb">
+
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/post2.jpg" alt="Post2" />
+
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <button><a href="#">Read More</a></button>
+
+        <div class="options">
+
+          <li><i class="fa fa-heart"></i>7</li>
+
+          <li><i class="fa fa-eye"></i>100</li>
+
+          <li><i class="fa fa-comment"></i>22</li>
+
+        </div>
+
+      </article>
+
+      <article>
+
+        <h2>Post Title</h2>
+
+        <div class="thumb">
+
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/post3.jpg" alt="Post" />
+
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <button><a href="#">Read More</a></button>
+
+        <div class="options">
+
+          <li><i class="fa fa-heart"></i>7</li>
+
+          <li><i class="fa fa-eye"></i>100</li>
+
+          <li><i class="fa fa-comment"></i>22</li>
+
+        </div>
+
+      </article>
+    -->
+    </section>
+
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+    var heart = $(".fa.fa-heart");
+
+    heart.on('click', function(e) {
+    
+      e.preventDefault();
+    
+      if (heart.hasClass("unloved")) {
+        heart.removeClass("unloved");
+        heart.addClass("loved");
+      } else {
+        heart.removeClass("loved");
+        heart.addClass("unloved");
+      }
+    });</script>
+
+
+</body>
+
+</html>

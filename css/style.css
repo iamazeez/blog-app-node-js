@@ -1,0 +1,254 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  font-family: "Open Sans", sans-serif;
+  font-size: 62.5%;
+}
+
+aside {
+  background: -webkit-linear-gradient(90deg, #8D80AD, #6D70BE);
+  background: linear-gradient(40deg, #8D80AD, #6D70BE);
+  height: 100vh;
+  width: 25%;
+  position: fixed;
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav h1 {
+  font-family: 'Lobster', cursive;
+  color: #FFF;
+  margin-top: 30px;
+  font-size: 70px;
+  font-size: 7rem;
+}
+
+nav ul {
+  margin-top: 50px;
+}
+
+nav li {
+  list-style: none;
+  margin: 20px 0;
+  padding: 10px;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.3rem;
+}
+
+nav li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+section {
+  height: 100vh;
+  background: #FFF;
+  height: 100%;
+  width: 75%;
+  float: right;
+  padding-bottom: 100px;
+}
+
+article {
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+article h2 {
+  padding: 10px 0;
+  color: #8D80AD;
+  font-size: 17px;
+  font-size: 1.7rem;
+}
+
+article p {
+  padding: 10px 0;
+  color: #8D80AD;
+  width: 95%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+.thumb {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  display: block;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #DDD;
+}
+
+.thumb img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  object-fit: cover;
+}
+
+.thumb img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+button {
+  background: transparent;
+  border: 1px solid #8D80AD;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  border-radius: 100px;
+}
+
+button:hover {
+  background: -webkit-linear-gradient(50deg, #8D80AD, #6D70BE);
+  background: linear-gradient(40deg, #8D80AD, #6D70BE);
+}
+
+button a {
+  color: #8D80AD;
+  text-decoration: none;
+  display: block;
+  padding: 8px 15px;
+  font-weight: 300;
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+
+button a:hover {
+  color: #FFF;
+}
+
+.options {
+  float: right;
+  margin-top: 8px;
+}
+
+.options li {
+  float: left;
+  list-style: none;
+  color: #AAA;
+  padding: 0 5px;
+  font-size: 1rem;
+}
+
+.social {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.fa {
+  color: #AAA;
+  padding: 0 5px;
+  font-size: 11px !important;
+  font-size: 1.1rem !important;
+}
+
+.fa-twitter,
+.fa-codepen,
+.fa-linkedin {
+  color: #FFF;
+  font-size: 12px !important;
+  font-size: 1.2rem !important;
+}
+
+.loved {
+  color: #B74F66;
+  -webkit-animation: loved 1s;
+  animation: loved 1s;
+}
+
+@-webkit-keyframes loved {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes loved {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  aside {
+    visibility: hidden;
+  }
+  article {
+    width: 90%;
+  }
+  section {
+    width: 100%;
+  }
+}
