@@ -20,7 +20,9 @@ const server = http.createServer((req,res) => {
 
     //Get Path And url parameters using destructring
 
-    const { query , pathname } = url.parse(req.url,true);
+    const { query, pathname } = url.parse(req.url, true);
+
+    console.log(query);
 
     //Create Simple Routing
 
@@ -32,16 +34,27 @@ const server = http.createServer((req,res) => {
         
 
         res.writeHead(200,{ 'content-type' : "text/html"});
+
+        //Put all Data in article dummy html and return data to blogpost        
         
         const blogPosts = blogData.map(el => replaceElement(articleTemplate,el)).join('');
+        
+        //Replace All blog card in container with the blogpost 
         const output = htmlIndexTemplate.replace("{%BLOG_POSTS%}",blogPosts);
+        
+        //Show output as html
         res.end(output);
 
 
 
     //Single Blog Post     
     }else if(pathname === "/blog"){
-        res.end("Blog Here");
+
+        res.writeHead(200,{ 'content-type' : "text/html"});
+
+        const blogID = blogData[query.id];
+        
+        res.end(`This is ${blogID}`);
 
         //404 Error
     }else{
